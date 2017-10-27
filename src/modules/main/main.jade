@@ -1,0 +1,26 @@
+form(ng-submit="taskCreate(desc,cost)")
+			h3 Create a task
+			label Task description :
+			textarea(rows="3" placeholder="Enter the task description" ng-model="desc")
+			button.btn(type="submit") Create
+.tasks
+	ul.queue
+		h3 Queue of tasks
+		li(ng-repeat="task in tasks")
+			label Task description :
+			textarea(rows="3" ng-model="task.desc")
+			button.btn(ng-click="taskDelete(task.id)") Remove
+			button.btn(ng-click="taskInwork(task.id)") Get to work
+
+	ul.work
+		h3 Leo Tasks in work
+		li(ng-repeat="task in tasksInwork" ng-init="timerCheck($index)")
+			label Task description :
+			textarea(rows="3" ng-model="task.desc")
+			button.btn(ng-click="taskComplete(task.id)") Done
+
+	ul.complete
+		h3 Completed tasks
+		li(ng-repeat="task in tasksComplete")
+				span(ng-if="task.desc") Task description :
+				p {{task.desc}}
