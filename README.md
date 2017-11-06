@@ -3,7 +3,7 @@
 ## Техническое описание 
 
 Проект использует следующие технологии:
-`(Angularjs,nodejs,gulp,browserify,jade,less,bootstrap,HTML5/CSS3)`
+`(nodejs,gulp,browserify,jade,less,bootstrap,HTML5/CSS3)`
 
 
 Для запуска приложения требуется установить следующие зависимости :
